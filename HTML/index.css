@@ -1,0 +1,800 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.top-bar {
+
+    position: absolute;
+    height: 6%;
+    min-width: 100%;
+    z-index: 500;
+}
+
+.MyVideo {
+    min-width: 100%;
+    height: auto;
+    position: relative;
+    width: 520px;
+    float: left;
+    z-index: -50;
+}
+
+.container-content-txt {
+    color: #ffffff;
+    font-size: 25px;
+    font-family: "华文宋体";
+    position: absolute;
+    left: calc(50% - 10vh);
+    top: calc(50% - 25vh);
+
+}
+
+ul {
+    margin-top: 0;
+    min-width: 100%;
+    position: relative;
+    float: left;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    width: auto;
+    height: 60px;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+li {
+
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    margin-left: 90px;
+    font-size: 25px;
+}
+
+main {
+    clear: both;
+    min-width: 100%;
+    height: 1200px;
+}
+
+text {
+    width: 100%;
+    height: 50%;
+    float: left;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.picture {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    left: 5%;
+    top: 18%;
+}
+
+main text section h4 {
+    font-size: 38px;
+    color: rgba(10, 10, 10, 0.8);
+    margin-bottom: 30px;
+
+}
+
+p {
+    margin-top: 40px;
+    font-size: 17px;
+    color: rgb(112, 117, 121);
+    line-height: 45px;
+}
+
+section {
+    top: 60px;
+    left: 50px;
+    width: 300px;
+    position: relative;
+    float: left;
+}
+/*--------------------------------------风车--------------------------*/
+.WindCar{
+    margin: auto;
+    top: 1.5em;
+    left: 0;
+    right: 0;
+    width: 1.5em;
+    height: 1.5em;
+}
+.WindCar:hover{
+    animation-delay: 0.5s;
+    animation:  windcar 2s ;
+    cursor:pointer;
+}
+@keyframes windcar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+/*  导航栏样式*/
+@media only screen and (max-width: 1000px) {
+    ul {
+        height: 40px;
+    }
+
+    li a {
+        height: 30px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    li a {
+        display: none
+    }
+
+    ul {
+        display: none
+    }
+
+    li a {
+        display: none
+    }
+
+    .audoio-button {
+        display: none;
+    }
+}
+
+/*文本*/
+@media only screen and (max-width: 900px) {
+
+    .container-content-txt {
+        display: none;
+    }
+
+    .picture {
+        width: 350px;
+        height: 350px;
+        left: 10%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    text {
+        display: block;
+    }
+
+    .picture {
+        width: 270px;
+        height: 270px;
+        position: relative;
+        text-align: center;
+        left: 33%;
+        top: 18%;
+    }
+
+    body {
+        width: auto;
+        height: auto;
+    }
+
+    section {
+        top: 60px;
+        left: 130px;
+    }
+}
+
+/*网易云评论*/
+.MusicCloud {
+    clear: both;
+    margin-top: 180px;
+    /*background-image: url("https://img.zcool.cn/community/01e61b5a709889a80121346618e6d6.JPG@1280w_1l_2o_100sh.jpg");*/
+    /*
+    background-image: linear-gradient(150deg,#2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad);  125deg是颜色的旋转角度 之后是一次的渐变颜色
+    这段语句可以插入url
+    也可以使用颜色渐变
+    若使渐变动起来需要加上动态时间
+    animation:bganimation 15s infinite;
+    */
+    background-image: linear-gradient(150deg, #316EFFFF, #A37CDEFF, #ff7575, #ff5757);
+    animation: change 10s infinite;
+    background-size: 300%;
+    float: left;
+    height: 50%;
+    min-width: 100%;
+    position: relative;
+    width: 520px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.audoio-button {
+    position: fixed;
+    padding: 5px;
+    top: 70px;
+    left: 30px;
+    /*-webkit-backdrop-filter: blur(50px); 这段代码用于苹果设备上一般用 -webkit- +结合平时的代码*/
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    z-index: 100;
+    border-radius: 50px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.music-bar {
+    clear: both;
+    border-radius: 50px;
+    width: 68em;
+    height: 70%;
+    padding: 40px;
+    backdrop-filter: blur(200px);
+    /*这段代码用于苹果设备上一般用 -webkit- +结合平时的代码*/
+    -webkit-backdrop-filter: blur(200px);
+    /*-webkit-box-shadow:2px 2px 2px 2px rgba(0,0,0,0.3);*/
+    -webkit-border: 1px solid rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 0 0 300px rgba(255, 255, 255, 0.1) inset;
+    box-shadow: 0 0 0 300px rgba(255, 255, 255, 0.1) inset;
+    /*box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);*/
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.music-comment {
+    font-size: 25px;
+    /*---文本上下居中---*/
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /*--------------*/
+    width: 700px;
+    height: 250px;
+    color: #FDFDF3FF;
+    text-align: center;
+    transition: color;
+}
+
+.content_box {
+    width: 72%;
+    height: auto;
+    align-items: center;
+}
+
+.music-liked {
+    float: left;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    left: 70%;
+    position: relative;
+    color: #FDFDF3FF;
+
+}
+
+.picture_ {
+    width: 180px;
+    height: auto;
+    border-radius: 18px;
+}
+
+.comment-picture {
+    height: 200px;
+    width: 200px;
+    padding: 13px;
+    margin-left: 2%;
+    float: left;
+}
+
+.author-name {
+    font-size: 20px;
+    text-align: center;
+    color: #fdfdf3;
+}
+
+/*网易云面板*/
+
+@media only screen and (max-width: 1000px) {
+    .picture_ {
+        width: 130px;
+        height: auto;
+        margin-left: 22px;
+    }
+
+    .MusicCloud {
+        margin-top: calc(50% + 10vh);
+    }
+
+    .music-bar {
+        width: 30em;
+        height: 30em;
+        padding: 15px;
+    }
+
+    .content_box {
+        width: 55%;
+        height: 80%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .author-name {
+        position: relative;
+        font-size: 18px;
+        line-height: 20px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        top: 55px;
+    }
+
+    .music-liked {
+        display: none;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .music-comment {
+        line-height: 120%;
+        font-size: 18px;
+        width: 200px;
+        height: auto;
+        position: relative;
+    }
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 1.7s
+    /*    修改这里需要修改cloudmusic.js的过度时间*/
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active, 2.1.8 版本以下 */
+{
+    opacity: 0
+}
+
+/*---------------------------个人小发明------------------------------*/
+.invention_box {
+    clear: both;
+    position: relative;
+    top: 130px;
+    /*border: solid 3px red;*/
+    width: auto;
+    height: calc(45% + 5vh);
+    text-align: center;
+}
+
+/*--------------------背景动画-------------------------*/
+
+
+.circle1 {
+    clear: both;
+    background-color: orange;
+    position: absolute;
+    left: calc(5% + 5vh);
+    height: 10px;
+    width: calc(5% + 5%);
+    border-radius: 50px;
+    z-index: 1;
+    animation: lineshow 5s ease-in-out infinite;
+
+}
+
+.circle2 {
+    clear: both;
+    background-color: #3b7eff;
+    position: absolute;
+    left: calc(5% + 5vh);
+    top: calc(50% - 4vh);
+    height: 10px;
+    width: calc(5% + 5%);
+
+    border-radius: 50px;
+    z-index: 1;
+    animation: lineshow 6s ease-in-out infinite;
+
+}
+
+.circle3 {
+    clear: both;
+    background-color: #f375a0;
+    position: absolute;
+    left: calc(5% + 5vh);
+    top: calc(60% - 5vh);
+    height: 10px;
+    width: calc(5% + 5%);
+    border-radius: 50px;
+    z-index: 1;
+    animation: lineshow 7s ease-in-out infinite;
+
+}
+
+@keyframes lineshow {
+    /*不能写死啊！！！！不能px写死*/
+    0% {
+        left: calc(5% + 5vh);
+    }
+    25% {
+        left: calc(25% + 35vh);
+        width: calc(5% + 5%);
+    }
+    50% {
+        left: calc(45% + 25vh);
+        width: calc(5% + 13%);
+    }
+    75% {
+        left: calc(25% + 33vh);
+        width: calc(5% + 15%);
+    }
+    100% {
+        left: calc(5% + 5vh);
+        width: calc(5% + 5%);
+    }
+}
+
+/*-------------------------------------------------------*/
+.invention_items {
+    clear: both;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 5;
+}
+
+.invention {
+    position: relative;
+    top: 50px;
+    border-radius: 25px;
+    width: 300px;
+    height: 350px;
+    border: solid 1px #ececec;
+    background-color: rgba(235, 235, 235, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    transition: 1s;
+    z-index: 50;
+}
+
+.invention:hover {
+    /*animation: box_move 2s ease-out;*/
+    /*    infinite 循环播放
+          ease-in/out 缓入/出
+    */
+    background-color: #3b7eff;
+    top: 12px;
+}
+
+.invention_text {
+    position: relative;
+    font-size: 25px;
+    color: #1d293e;
+    top: 58px;
+    font-family: Consolas;
+}
+
+/*------------------------文本--------------------*/
+.invention:hover .invention_text {
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    font-size: 18px;
+    color: #ffffff;
+    top: 26px;
+}
+
+.invention .invention_text {
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    color: #1d293e;
+}
+
+.invention_text1 {
+
+    position: relative;
+    font-size: 18px;
+    top: 70px;
+    display: none;
+    font-family: Consolas;
+
+}
+
+.invention:hover .invention_text1 {
+    animation: textcolor 1s forwards ease-in-out;
+    display: inline-block;
+}
+
+@keyframes textcolor {
+    0% {
+        color: rgba(59, 126, 255, 0.1);
+        top: 70px;
+    }
+    100% {
+        color: #ffffff;
+
+        top: 26px;
+    }
+}
+
+/*-----------------------图片-----------------------*/
+.invention_picture {
+    position: relative;
+    top: 20px;
+    border-radius: 17px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.invention:hover .invention_picture {
+    /*animation: box_move2 1s forwards;*/
+    transition: all 0.5s ease-in-out;
+    /*-------------------------------------------*/
+    -webkit-transition: all 0.5s ease-in-out;
+    /*-----------在苹果浏览器上使用-----------------*/
+    top: 10px;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.invention .invention_picture {
+    /*animation: box_move2 1s forwards;*/
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .invention_box {
+        position: relative;
+        top: 280px;
+        min-width: 100%;
+        width: 513px;
+    }
+    .invention{
+        margin-top: 50px;
+    }
+    .MusicCloud{
+        margin-top: 700px;
+    }
+}
+
+/*--------------------------------------------------------------------------*/
+footer {
+    background-color: #212529;
+    min-width: 100%;
+    height: auto;
+    position: relative;
+    width: 520px;
+    float: left;
+}
+
+footer div {
+    clear: both;
+    text-align: center;
+}
+
+footer div a {
+    color: white;
+    font-family: "宋体";
+    font-size: 25px;
+    margin-left: 5%;
+}
+
+footer p {
+    clear: both;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    line-height: 200%;
+    font-size: 25px;
+}
+
+footer h1 {
+    text-align: center;
+    font-size: 230%;
+}
+
+@media screen and (max-width: 500px) {
+    footer div a {
+        font-size: 23px;
+        margin-left: 5%;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+}
+
+@keyframes change {
+    0% {
+        background-position: 0% 50%;
+
+    }
+    50% {
+        background-position: 100% 50%;
+
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/*--------------------------------------弹窗-----------------------------------------------*/
+.Popimg_Box{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*居中代码以上*/
+    /*border: solid 3px red;*/
+    border-radius: 17px;
+    height:39em;
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 2px 2px 2px 2px rgba(79, 56, 56, 0.2);
+    z-index: 100;
+    visibility: hidden;
+    animation-delay: 1.5s;
+    animation:  popIn 2s forwards ;
+}
+/*弹窗动画--------------------------------------*/
+/*@-webkit-keyframes popIn {*/
+/*    0% {*/
+/*        -webkit-transform: scale3d(0, 0, 0);*/
+/*        transform: scale3d(0.5, 0.5, 0.5);*/
+/*        opacity: 0;*/
+/*    }*/
+/*    50% {*/
+/*        -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);*/
+/*        animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);*/
+/*    }*/
+/*    100% {*/
+/*        -webkit-transform: scale3d(1, 1, 1);*/
+/*        transform: scale3d(1, 1, 1);*/
+/*        -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
+/*        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/
+
+/*@keyframes popIn {*/
+/*    0% {*/
+/*        */
+/*        -webkit-transform: scale3d(0, 0, 0);*/
+/*        transform: scale3d(0.5, 0.5, 0.5);*/
+/*        opacity: 0;*/
+/*    }*/
+/*    50% {*/
+/*        -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);*/
+/*        animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);*/
+/*    }*/
+/*    100% {*/
+/*        -webkit-transform: scale3d(1, 1, 1);*/
+/*        transform: scale3d(1, 1, 1);*/
+/*        -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
+/*        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/
+.Pop-content{
+    height: auto;
+    width: 24em;
+}
+.headline{
+    margin: 0.5em;
+    clear: both;
+    font-size: 2em;
+    color: #323648;
+}
+.close{
+    left:4.5em;
+    text-decoration-line: none;
+    font-size: 3em;
+    color: #666;
+    position: relative;
+    cursor: pointer;
+}
+.close:hover
+{
+    animation-delay: 0.5s;
+    animation: closecolor 1s forwards;
+
+}
+@keyframes closecolor {
+    from{
+        color: #666;
+        transform: rotate(0deg);
+    /*  transform的用法
+        1.rotate旋转
+        2.  translate位置
+        3.scale缩放
+        4.skew型态
+    */
+    }
+    to{
+        color: orangered;
+        transform: rotate(360deg);
+    }
+}
+.Pop-text{
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+}
+.Pop-email{
+    text-decoration-line: none;
+    color: rgba(122, 121, 121, 0.8);
+}
+.Rocket_Box{
+    height: 5em;
+    width: 5em;
+    background-color: transparent;
+    position: fixed;
+    z-index: 500;
+    margin: auto;
+    right: 5em;
+    bottom: 5em;
+    background-size: 5em 5em;
+    background-image: url("../resource/Rocket_List/火箭1.png");
+    display: none;
+}
+.Rocket_Box:hover{
+    animation-delay: 0.5s;
+    animation: Rocket 0.5s ease-in-out infinite;
+    cursor: pointer;
+}
+@keyframes Rocket {
+    0%{
+        background-image: url("../resource/Rocket_List/火箭1.png");
+    }
+    20%{
+        background-image: url("../resource/Rocket_List/火箭2.png");
+    }
+    40%{
+        background-image: url("../resource/Rocket_List/火箭3.png");
+    }
+    60%{
+        background-image: url("../resource/Rocket_List/火箭4.png");
+    }
+    80%{
+        background-image: url("../resource/Rocket_List/火箭5.png");
+    }
+    100%{
+        background-image: url("../resource/Rocket_List/火箭1.png");
+    }
+}
+@media only screen and (max-width: 600px) {
+    .Rocket_Box{
+        right: 2em;
+        bottom: 2em;
+        background-image:url("../resource/ReturnTop.png");
+    }
+    .Rocket_Box:hover{
+        animation: none;
+    }
+}
